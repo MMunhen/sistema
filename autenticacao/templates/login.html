@@ -1,0 +1,13 @@
+{% extends 'base_autenticacao.html' %}
+{% load bootstrap5 %}
+{% block content %}
+    <h2>Login</h2>
+    <div class="login">
+        <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form login_form %}
+            <input type="submit" value="Logar" class="btn btn-primary"/>
+        </form>
+    </div>
+    
+{% endblock %}
